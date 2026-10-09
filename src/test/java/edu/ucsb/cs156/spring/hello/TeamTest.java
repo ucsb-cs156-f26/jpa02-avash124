@@ -51,9 +51,9 @@ public class TeamTest {
     public void equals_same_name_and_diff_members_test_for_false(){
         Team t1 = new Team("curr team");
         t1.addMember("Aryan");
-        Team t2 = new Team("fut team");
+        Team t2 = new Team("curr team");
         t2.addMember("Yikers");
-        assertTrue(t1.equals(t2));
+        assertFalse(t1.equals(t2));
     }
 
 
