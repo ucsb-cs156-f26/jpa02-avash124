@@ -38,6 +38,25 @@ public class TeamTest {
         assertFalse(team.equals("test-team"));
     }
 
+    @Test 
+    public void equals_same_name_and_members_test_for_true(){
+        Team t1 = new Team("curr team");
+        t1.addMember("Aryan");
+        Team t2 = new Team("curr team");
+        t2.addMember("Aryan");
+        assertTrue(t1.equals(t2));
+    }
+
+    @Test 
+    public void equals_same_name_and_diff_members_test_for_false(){
+        Team t1 = new Team("curr team");
+        t1.addMember("Aryan");
+        Team t2 = new Team("fut team");
+        t2.addMember("Yikers");
+        assertTrue(t1.equals(t2));
+    }
+
+
     @Test
     public void test_evaluates_different_instances(){
         Team t1 = new Team();
