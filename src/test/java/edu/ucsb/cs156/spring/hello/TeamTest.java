@@ -35,7 +35,7 @@ public class TeamTest {
 
     @Test 
     public void equals_test_for_different_class(){
-        assertFalse(team.equals(new Team()));
+        assertFalse(team.equals("test-team"));
     }
 
     @Test
